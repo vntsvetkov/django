@@ -1,6 +1,6 @@
 from django.urls import path
-from myapp.views import main
-from myapp.views import about
+from catalog.views import main
+from catalog.views import about
 
 urlpatterns = [
     path('main/', main),
