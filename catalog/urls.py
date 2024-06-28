@@ -1,12 +1,10 @@
 from django.urls import path
 from catalog.views import main
 from catalog.views import about
-from catalog.views import category
-from catalog.views import device
+from catalog.views import get_by_genre
 
 urlpatterns = [
-    path('main/<str:category>/<int:index>', device),
-    path('main/<str:category>/', category),
     path('main/', main),
-    path('about/', about)
+    path('about/', about),
+    path('<str:genre>/', get_by_genre),
 ]

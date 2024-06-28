@@ -23,6 +23,6 @@ import catalog.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('catalog/', include('catalog.urls')),
-    re_path(r'^catalog', catalog.views.redirect),
     path('blog/main/', blog.views.main),
+    re_path(r'^blog/', blog.views.redirect),
 ]
